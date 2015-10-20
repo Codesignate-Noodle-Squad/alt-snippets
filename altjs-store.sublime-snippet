@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+import alt from '${1:/path/to/alt}';
+import ${2:ActionName} from '${3:/path/to/your/action.js}';
+
+class ${4:StoreName} {
+    constructor () {
+
+        this.bindListeners({
+            ${5:functionThatWillHandleAction}: ${2:ActionName}.${6:FUNCTION_NAME}
+        });
+    }
+
+    ${5:functionThatWillHandleAction} () {
+
+    }
+}
+
+export default alt.createStore(${4:StoreName}, ${4:StoreName});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>alt-s</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>Alt: Create Store</description>
+</snippet>
